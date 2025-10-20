@@ -1,0 +1,127 @@
+.api-health-monitor {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: var(--space-lg);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.api-health-monitor__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.api-health-monitor__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.api-health-monitor__refresh {
+  color: var(--color-primary);
+}
+
+.rotating {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.api-health-monitor__list {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.api-item {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+  padding: var(--space-md);
+  transition: all 0.2s ease;
+}
+
+.api-item:hover {
+  background: var(--bg-hover);
+  transform: translateX(4px);
+}
+
+.api-item__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.api-item__icon {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.api-item__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.api-item__name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.api-item__agent {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.api-item__status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.api-item__metrics {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.api-metric {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.api-metric__label {
+  color: var(--text-secondary);
+}
+
+.api-metric__value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.api-item__sparkline {
+  height: 30px;
+  margin-top: var(--space-xs);
+}

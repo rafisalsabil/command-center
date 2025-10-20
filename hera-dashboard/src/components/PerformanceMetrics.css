@@ -1,0 +1,127 @@
+.performance-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.metric-chart-card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: var(--space-lg);
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-chart-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.donut-chart-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-chart-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.donut-chart-total {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.donut-chart-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  justify-content: center;
+}
+
+.donut-chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 14px;
+}
+
+.legend-item__color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-item__name {
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.legend-item__value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.legend-item-inline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 13px;
+}
+
+.legend-item-inline .legend-item__name {
+  color: var(--text-secondary);
+}
+
+.legend-item-inline .legend-item__value {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+  .performance-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metric-chart-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .performance-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-chart-card:last-child {
+    grid-column: auto;
+  }
+}
