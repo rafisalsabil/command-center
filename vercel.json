@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd hera-dashboard && npm install && npm run build",
+  "outputDirectory": "hera-dashboard/dist",
+  "installCommand": "cd hera-dashboard && npm install",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
