@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Server, Radio, Database, Cpu, Inbox, Shield } from 'lucide-react';
+import { Server, Radio, Database, Inbox, Shield } from 'lucide-react';
 import type { Agent } from '../types/index';
 import './SystemMaintenanceCenter.css';
 
@@ -56,7 +56,6 @@ interface SecurityStatus {
 // Mock data generators
 function generateChannelStatus(): ChannelStatus[] {
   const channels = ['WhatsApp', 'Facebook Messenger', 'Instagram DM', 'Email', 'Live Chat', 'Telegram', 'LINE', 'SMS'];
-  const statuses: ('connected' | 'degraded' | 'disconnected')[] = ['connected', 'degraded', 'disconnected'];
 
   return channels.map(channel => {
     const status = Math.random() > 0.15 ? 'connected' : Math.random() > 0.5 ? 'degraded' : 'disconnected';

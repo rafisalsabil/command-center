@@ -13,9 +13,7 @@ import {
   generateInitialAgents,
   generateHistoricalMetrics,
   updateAgentStatus,
-  shouldGenerateAlert,
   shouldGenerateEvent,
-  generateAlert,
   generateActivityEvent
 } from './utils/mockData';
 import './App.css';
@@ -24,7 +22,7 @@ function App() {
   const [agents, setAgents] = useState<Agent[]>([]);
   const [alerts, setAlerts] = useState<Alert[]>([]);
   const [activityEvents, setActivityEvents] = useState<ActivityEvent[]>([]);
-  const [notificationLogs, setNotificationLogs] = useState<NotificationLog[]>([]);
+  const [notificationLogs] = useState<NotificationLog[]>([]);
   const [historicalData, setHistoricalData] = useState<MetricDataPoint[]>([]);
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [soundEnabled, setSoundEnabled] = useState(true);

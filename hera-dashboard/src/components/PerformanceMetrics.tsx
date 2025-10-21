@@ -11,7 +11,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer
 } from 'recharts';
 import './PerformanceMetrics.css';
@@ -119,7 +118,7 @@ export default function PerformanceMetrics({ agents, historicalData }: Performan
               }}
             />
             <Bar dataKey="successRate" radius={[8, 8, 0, 0]}>
-              {successRateData.map((entry, index) => (
+              {successRateData.map((_entry, index) => (
                 <Cell key={`cell-${index}`} fill={AGENT_COLORS[index]} />
               ))}
             </Bar>
